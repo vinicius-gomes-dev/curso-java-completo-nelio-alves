@@ -1,3 +1,7 @@
+# Metadatas Eclipse workspace
+# ./*/.metadata/
+.metadata/
+
 # Compiled class file
 *.class
 
