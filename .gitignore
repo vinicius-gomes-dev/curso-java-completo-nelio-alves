@@ -1,5 +1,5 @@
-# Metadatas Eclipse workspace
-# ./*/.metadata/
+# Metadatas and prefs Eclipse workspace
+.settings/
 .metadata/
 
 # Compiled class file
