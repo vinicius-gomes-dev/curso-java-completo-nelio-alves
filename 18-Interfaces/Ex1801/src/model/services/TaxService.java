@@ -1,4 +1,4 @@
-package model.service;
+package model.services;
 
 public interface TaxService {
 	

@@ -1,4 +1,4 @@
-package model.service;
+package model.services;
 
 import model.entities.CarRental;
 import model.entities.Invoice;
