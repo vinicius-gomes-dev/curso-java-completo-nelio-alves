@@ -1,6 +1,6 @@
 package model.entities;
 
-public class Printer extends Device {
+public class Printer extends Device implements PrinterInterface{
 
 	public Printer(String serialNumber) {
 		super(serialNumber);
@@ -11,6 +11,7 @@ public class Printer extends Device {
 		System.out.println("Printer processing: " + doc);
 	}
 	
+	@Override
 	public void print(String doc) {
 		System.out.println("Printing: " + doc);
 	}
