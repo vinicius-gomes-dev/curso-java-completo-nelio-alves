@@ -1,6 +1,7 @@
 # Metadatas and prefs Eclipse workspace
 .settings/
 .metadata/
+RemoteSystemsTempFiles/
 
 # Compiled class file
 *.class
