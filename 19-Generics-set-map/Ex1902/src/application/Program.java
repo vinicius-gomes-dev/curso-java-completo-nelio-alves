@@ -4,11 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
 import model.entities.Product;
-import model.services.CalculationService;
 
 public class Program {
 
@@ -28,7 +28,8 @@ public class Program {
 				lineFile = bf.readLine();
 			}
 			
-			Product product = CalculationService.max(products);
+//			Product product = CalculationService.max(products);
+			Product product = Collections.max(products);
 			
 			System.out.println("Most expensive:");
 			System.out.println(product);
