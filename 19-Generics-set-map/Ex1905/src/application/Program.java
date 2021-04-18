@@ -10,6 +10,7 @@ public class Program {
 		
 		System.out.println("Cliente 1: " + c1.hashCode());
 		System.out.println("Cliente 2: " + c2.hashCode());
+		System.out.println(c1.hashCode() == c2.hashCode());
 		System.out.println(c1.equals(c2));
 
 	}
