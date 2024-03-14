@@ -3,6 +3,12 @@
 .metadata/
 RemoteSystemsTempFiles/
 
+# Git files
+**/.gitignore
+
+# VS Code
+.vscode/
+
 # Compiled class file
 *.class
 
