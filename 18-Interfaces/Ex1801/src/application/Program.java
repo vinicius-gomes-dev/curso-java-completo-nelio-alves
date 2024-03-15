@@ -1,14 +1,14 @@
 package application;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
 import model.entities.CarRental;
 import model.entities.Vehicle;
-import model.services.BrazilTaxService;
+import model.services.TaxServiceImpl;
 import model.services.RentalService;
 
 public class Program {
@@ -16,16 +16,19 @@ public class Program {
 	public static void main(String[] args) throws ParseException {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		final SimpleDateFormat SDF = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+
+		final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 		
 		
 		System.out.println("==> Enter rental data <==");
 		System.out.print("Car model: ");
 		String carModel = sc.nextLine();
+		
 		System.out.print("Pickup (dd/mm/yyyy hh:mm): ");
-		Date dateStart = SDF.parse(sc.nextLine());
+		LocalDateTime dateStart = LocalDateTime.parse(sc.nextLine(), dateTimeFormatter);
+		
 		System.out.print("Return (dd/mm/yyyy hh:mm): ");
-		Date dateFinish = SDF.parse(sc.nextLine());
+		LocalDateTime dateFinish = LocalDateTime.parse(sc.nextLine(), dateTimeFormatter);
 		
 		CarRental carRental = new CarRental(dateStart, dateFinish, new Vehicle(carModel));
 		
@@ -37,7 +40,7 @@ public class Program {
 		double pricePerDay = sc.nextDouble();
 		sc.nextLine();
 		
-		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
+		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new TaxServiceImpl());
 		rentalService.processInvoice(carRental);
 		
 		System.out.println();
