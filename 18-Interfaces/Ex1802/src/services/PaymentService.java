@@ -1,6 +1,6 @@
-package model.services;
+package services;
 
-public interface OnlinePaymentService {
+public interface PaymentService {
 	
 	public double paymentFee(double amount);
 	public double interestRate(double amount, int months);
