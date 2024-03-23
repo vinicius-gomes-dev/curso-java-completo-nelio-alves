@@ -1,8 +1,8 @@
-package model.entities;
+package entities;
 
-import model.enums.Color;
+import enums.Color;
 
-public class Circle extends AbstractShape{
+public class Circle extends AbstractShapeImpl{
 	private Double radius;
 
 	public Circle(Color color, Double radius) {

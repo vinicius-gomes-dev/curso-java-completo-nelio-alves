@@ -1,15 +1,15 @@
-package model.entities;
+package entities;
 
-import model.enums.Color;
+import enums.Color;
 
-public abstract class AbstractShape implements Shape{
+public abstract class AbstractShapeImpl implements Shape{
 	
 	private Color color;
 	
-	public AbstractShape() {
+	public AbstractShapeImpl() {
 	}
 	
-	public AbstractShape(Color color) {
+	public AbstractShapeImpl(Color color) {
 		this.color = color;
 	}
 	
